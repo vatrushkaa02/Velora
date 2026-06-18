@@ -1,1 +1,39 @@
+.header{
+    background-color: black;
+    color: white;
+    
+}
+.title{
+  
+  font-family: var(--font5);
+font-weight: 400;
+font-size: 40px;
+color: #fff;
+margin-bottom: -45px;
+display: flex;
+justify-content: center;
+}
+.title1{
+  
+font-family: 'COCOMAT', sans-serif;
+font-weight: 400;
+font-size: 40px;
+color: #fff;
+display: flex;
+justify-content: center;
+}
+
+.hamburger menu{
+width: 10px;
+height: 10px;
+
+}
+
+
+.body{
+    background-color: black;
+    color: white;
+    
+}
+
 
