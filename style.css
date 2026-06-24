@@ -23,11 +23,18 @@ display: flex;
 justify-content: center;
 }
 
-.hamburger-menu{
+.titles{
+   padding-left: 260px;
+    
+}
+.icon{
+    display: flex;
+    justify-content: flex-start;
 width: 75px;
 height: 75px;
 
 }
+
 
 
 body{
@@ -36,4 +43,14 @@ body{
     
 }
 
+.velora-box{
+    display: flex;
+   flex-direction: row;
+justify-content: space-around;
+align-items: center;
 
+padding-left: 80px;
+padding-right: 80px;
+padding-bottom: 20px;
+padding-top: 20px;
+}
