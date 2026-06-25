@@ -140,3 +140,49 @@ display: flex;
 padding-left: 80px;
 }
 
+
+
+
+
+/* ===================== */
+/* LIGHT THEME */
+/* ===================== */
+
+.light-theme{
+
+    background:#f4f4f4 !important;
+    color:#111 !important;
+
+}
+
+.light-theme .header{
+
+    background:white !important;
+    color:black !important;
+
+}
+
+.light-theme .title,
+.light-theme .title1,
+.light-theme .bpapt{
+
+    color:black !important;
+
+}
+
+.light-theme .image-gallery-top{
+
+    background-color:#d68b81 !important;
+
+}
+
+
+
+.light-theme .icon,
+.light-theme .search,
+.light-theme .config,
+.light-theme .profile{
+
+    filter: brightness(0);
+
+}
