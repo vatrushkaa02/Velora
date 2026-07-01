@@ -32,11 +32,11 @@ popup.innerHTML = `
     <h2>Theme Settings</h2>
 
     <button id="dark-theme-btn">
-        🌙 Dark Theme
+    Dark Theme
     </button>
 
     <button id="light-theme-btn">
-        ☀ Light Theme
+    Light Theme
     </button>
 
     <div class="music-player">
@@ -221,5 +221,4 @@ window.addEventListener("load",()=>{
     },3000);
 
 });
-
 
