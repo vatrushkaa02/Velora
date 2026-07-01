@@ -26,27 +26,51 @@ document.addEventListener("DOMContentLoaded", () => {
 
     popup.id = "theme-popup";
 
-    popup.innerHTML = `
+popup.innerHTML = `
+<div id="theme-window">
 
-        <div id="theme-window">
+    <h2>Theme Settings</h2>
 
-            <h2>Theme Settings</h2>
+    <button id="dark-theme-btn">
+        🌙 Dark Theme
+    </button>
 
-            <button id="dark-theme-btn">
-                Dark Theme
-            </button>
+    <button id="light-theme-btn">
+        ☀ Light Theme
+    </button>
 
-            <button id="light-theme-btn">
-                Light Theme
-            </button>
+    <div class="music-player">
 
-            <button id="close-theme-btn">
-                Close
-            </button>
+        <iframe
+            src="https://audio.com/embed/audio/1869523297704962?theme=image"
+            style="
+                display:block;
+                border:none;
+                border-radius:10px;
+                width:600px;
+                height:204px;">
+        </iframe>
 
-        </div>
+        <a
+            href="https://audio.com/crea1ant"
+            target="_blank"
+            style="
+                display:block;
+                text-align:center;
+                margin-top:8px;
+                color:#A4ABB6;
+                text-decoration:none;">
+            @crea1ant
+        </a>
 
-    `;
+    </div>
+
+    <button id="close-theme-btn">
+        Close
+    </button>
+
+</div>
+`;
 
     document.body.appendChild(popup);
 
@@ -72,18 +96,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const windowBox = document.getElementById("theme-window");
 
-    windowBox.style.background = "#202020";
-    windowBox.style.color = "white";
+    const buttons = windowBox.querySelectorAll("button");
 
-    windowBox.style.padding = "30px";
-    windowBox.style.borderRadius = "20px";
+buttons.forEach(button => {
 
-    windowBox.style.display = "flex";
-    windowBox.style.flexDirection = "column";
+    button.style.padding = "12px";
 
-    windowBox.style.gap = "15px";
+    button.style.fontSize = "18px";
 
-    windowBox.style.minWidth = "300px";
+    button.style.cursor = "pointer";
+
+    button.style.border = "none";
+
+    button.style.borderRadius = "10px";
+
+    button.style.width = "220px";
+
+});
+
+windowBox.style.background = "#202020";
+windowBox.style.color = "white";
+windowBox.style.padding = "30px";
+windowBox.style.borderRadius = "20px";
+
+windowBox.style.display = "flex";
+windowBox.style.flexDirection = "column";
+windowBox.style.alignItems = "center";
+windowBox.style.gap = "20px";
+
+windowBox.style.width = "850px";
+windowBox.style.maxWidth = "90%";
 
     /* ============================= */
     /* OPEN MENU                     */
@@ -148,4 +190,36 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//ANIMATION
+
+
+window.addEventListener("load",()=>{
+
+    setTimeout(()=>{
+
+        document.getElementById("loader").classList.add("hide");
+
+    },3000);
+
+});
+
 
