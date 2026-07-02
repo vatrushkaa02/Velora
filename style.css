@@ -1,6 +1,74 @@
+
+
+
+
+
+:root{
+
+    --bg:#000;
+    --text:#fff;
+
+    --header:#000;
+
+    --accent:#a44a3f;
+
+    --card:#a44b3fea;
+
+}
+
+/* ===================== */
+/* LIGHT THEME */
+/* ===================== */
+
+
+
+
+
+.light-theme .icon,
+.light-theme .search,
+.light-theme .config,
+.light-theme .profile{
+
+    filter: brightness(0);
+
+}
+.light-theme .about-project3{
+    background-image:url("https://github.com/vatrushkaa02/Velora/blob/main/images/Asset%2011background%20flowers%20artistic%20black.png?raw=true");
+}
+
+.light-theme .logika-img{
+    background-image:url("https://github.com/vatrushkaa02/Velora/blob/main/images/Asset%2012logika%20school%20logo%20white.png?raw=true");
+}
+
+.light-theme{
+
+    --bg:#f5f5f5;
+
+    --text:#111;
+
+    --header:#ffffff;
+
+    --accent:#a44a3f;
+
+    --card:#a44b3fea;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .header{
-    background-color: black;
-    color: white;
+    background-color: var(--bg);
+    color: var(--text);
     
 }
 .title{
@@ -8,7 +76,7 @@
   font-family: var(--font5);
 font-weight: 800;
 font-size: 40px;
-color: #fff;
+color: var(--text);
 margin-bottom: -45px;
 display: flex;
 justify-content: center;
@@ -18,7 +86,7 @@ justify-content: center;
 font-family: 'COCOMAT', sans-serif;
 font-weight: 400;
 font-size: 40px;
-color: #fff;
+color: var(--text);
 display: flex;
 justify-content: center;
 }
@@ -84,8 +152,8 @@ height: 50px;
 
 
 body{
-    background: #000000;
-    color: white;
+    background: var(--bg);
+    color: var(--text);
     
 }
 
@@ -110,7 +178,7 @@ padding-top: 20px;
 justify-content: space-around;
 align-items: center;
 
-background-color: #a44a3f;
+background-color: var(--accent);
 
 padding-left: 80px;
 padding-right: 80px;
@@ -134,7 +202,7 @@ transition-duration: 0.2s;
 font-family: 'COCOMAT', sans-serif;
 font-weight: 400;
 font-size: 48px;
-color: #fff;
+color: var(--text);
 display: flex;
 padding-left: 80px;
 padding-bottom: 10px;
@@ -145,7 +213,7 @@ padding-bottom: 10px;
 font-family: 'COCOMAT', sans-serif;
 font-weight: 400;
 font-size: 48px;
-color: #fff;
+color: var(--text);
 display: flex;
 padding-left: 80px;
 
@@ -157,7 +225,7 @@ padding-left: 80px;
 font-family: 'COCOMAT', sans-serif;
 font-weight: 400;
 font-size: 48px;
-color: #fff;
+color: white;
 display: flex;
 padding-left: 80px;
 padding-top: 80px;
@@ -168,13 +236,13 @@ padding-top: 80px;
 font-family: 'COCOMAT', sans-serif;
 font-weight: 300;
 font-size: 35px;
-color: #fff;
+color: white;
 display: flex;
 padding-left: 80px;
 
 }
 .about-project2{
-background-color: #a44b3fea;
+background-color: var(--card);
 
 margin: 20px;
 
@@ -223,7 +291,7 @@ width: 500px;
   font-family: 'COCOMAT', sans-serif;
 font-weight: 400;
 font-size: 26px;
-color: #fff;
+color: var(--text);
 display: flex;
 padding-left: 20px;
 padding-bottom: 30px;  
@@ -257,48 +325,6 @@ font-family: 'COCOMAT', sans-serif;
 
 
 
-/* ===================== */
-/* LIGHT THEME */
-/* ===================== */
-
-.light-theme{
-
-    background:#f4f4f4 !important;
-    color:#111 !important;
-
-}
-
-.light-theme .header{
-
-    background:white !important;
-    color:black !important;
-
-}
-
-.light-theme .title,
-.light-theme .title1,
-.light-theme .bpapt{
-
-    color:black !important;
-
-}
-
-.light-theme .image-gallery-top{
-
-    background-color:#d68b81 !important;
-
-}
-
-
-
-.light-theme .icon,
-.light-theme .search,
-.light-theme .config,
-.light-theme .profile{
-
-    filter: brightness(0);
-
-}
 
 
 
@@ -324,7 +350,7 @@ font-family: 'COCOMAT', sans-serif;
     width:100%;
     height:100%;
 
-    background:black;
+    background:var(--bg);
 opacity: 98%;
     display:flex;
 
@@ -341,7 +367,7 @@ opacity: 98%;
 
     pointer-events:none;
 
-    transition:1s;
+    transition:4s;
 
 }
 
@@ -385,19 +411,21 @@ margin-right: 20px;
 font-family: 'COCOMAT', sans-serif;
 font-weight: 100;
 font-size: 60px;
-color: #fff;
+color: var(--text);
 display: flex;
 justify-content: center;
-animation:fade 6s;
+animation:fade 5s;
+
 }
 
 .line{
-background-color: #D9D9D9;
+background-color: var(--text);
 margin-top: -30px;
 margin-bottom: -60px;
 margin-left: 20px;
 margin-right: 20px;
 font-size: 1px;
-animation:fade 4s;
-animation:grow 7s;
+animation:fade 3s;
+animation:grow 5s;
 } 
+
