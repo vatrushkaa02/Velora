@@ -39,40 +39,90 @@ popup.innerHTML = `
     Light Theme
     </button>
 
-    <div class="music-player">
+<hr style="width:100%;">
 
-        <iframe
-            src="https://audio.com/embed/audio/1869523297704962?theme=image"
-            style="
-                display:block;
-                border:none;
-                border-radius:10px;
-                width:600px;
-                height:204px;">
-        </iframe>
+<h3>Background Music</h3>
 
-        <a
-            href="https://audio.com/crea1ant"
-            target="_blank"
-            style="
-                display:block;
-                text-align:center;
-                margin-top:8px;
-                color:#A4ABB6;
-                text-decoration:none;">
-            @crea1ant
-        </a>
+<label class="switch">
+    <input type="checkbox" id="music-toggle">
+    <span>Enable background music</span>
+</label>
 
-    </div>
+    <hr style="width:100%;">
+
+    <h3>Startup Intro</h3>
+
+    <label class="switch">
+        <input type="checkbox" id="intro-toggle">
+        <span>Enable intro animation & sound</span>
+    </label>
+
+   
+
+
+ 
 
     <button id="close-theme-btn">
         Close
     </button>
 
-</div>
-`;
 
-    document.body.appendChild(popup);
+
+
+`;
+document.body.appendChild(popup);
+
+const introToggle = document.getElementById("intro-toggle");
+
+// Default: ON
+if(localStorage.getItem("introEnabled") === null){
+    localStorage.setItem("introEnabled","true");
+}
+
+introToggle.checked =
+    localStorage.getItem("introEnabled") === "true";
+
+
+
+
+    introToggle.addEventListener("change",()=>{
+
+    localStorage.setItem(
+        "introEnabled",
+        introToggle.checked
+    );
+
+});
+
+
+const musicToggle = document.getElementById("music-toggle");
+
+if(localStorage.getItem("musicEnabled") === null){
+    localStorage.setItem("musicEnabled","true");
+}
+
+musicToggle.checked =
+    localStorage.getItem("musicEnabled") === "true";
+
+musicToggle.addEventListener("change",()=>{
+
+    localStorage.setItem(
+        "musicEnabled",
+        musicToggle.checked
+    );
+
+    if(musicToggle.checked){
+        if(localStorage.getItem("musicEnabled") !== "false"){
+    bg.play();
+}
+    }else{
+        bg.pause();
+        bg.currentTime = 0;
+    }
+
+});
+
+    
 
     /* ============================= */
     /*      POPUP STYLES            */
@@ -214,11 +264,47 @@ windowBox.style.maxWidth = "90%";
 
 window.addEventListener("load",()=>{
 
-    setTimeout(()=>{
+});
 
-        document.getElementById("loader").classList.add("hide");
 
-    },3000);
+
+//SOUND
+const loader = document.getElementById("loader");
+const intro = document.getElementById("introAudio");
+const bg = document.getElementById("bgMusic");
+
+const introEnabled =
+    localStorage.getItem("introEnabled") !== "false";
+
+if (introEnabled) {
+
+   loader.addEventListener("click", () => {
+
+    loader.classList.add("hide");
+
+    setTimeout(() => {
+
+        intro.play();
+
+    }, 20); // halfway through the fade
+
+}, { once:true });
+
+} else {
+
+    loader.classList.add("hide");
+
+    if(localStorage.getItem("musicEnabled") !== "false"){
+    bg.play();
+}
+
+}
+
+intro.addEventListener("ended", () => {
+
+    if(localStorage.getItem("musicEnabled") !== "false"){
+    bg.play();
+}
 
 });
 
